@@ -8,8 +8,6 @@ import { FriendList } from './friendList/FriendList';
 import { Statistics } from './statictics/Statistics';
 import TransactionsHistory from './transactions/TransactionHistory';
 
-console.log(user);
-
 export  const App = () => {
   return (
     <>
