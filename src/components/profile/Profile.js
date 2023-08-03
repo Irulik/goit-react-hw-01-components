@@ -1,11 +1,8 @@
 
-import React from 'react';
 import { ProfileContainer, Description, Avatar, ProfileName, ProfileTag, ProfileLocation, Stats, FollowersList, ViewsList, LikesList, Label, Quantity } from './Profile.styled';
-import user from './user.json'; 
 
-const Profile = () => {
-  const { avatar, username, tag, location, stats } = user;
 
+export const Profile = ({ avatar, username, tag, location, followers, views, likes }) => {
   return (
     <ProfileContainer>
       <Description>
@@ -18,20 +15,19 @@ const Profile = () => {
       <Stats>
         <FollowersList>
           <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <Quantity>{followers}</Quantity>
         </FollowersList>
         <ViewsList>
           <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <Quantity>{views}</Quantity>
         </ViewsList>
         <LikesList>
           <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <Quantity>{likes}</Quantity>
         </LikesList>
       </Stats>
     </ProfileContainer>
   );
 };
 
-export default Profile;
 

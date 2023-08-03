@@ -8,17 +8,18 @@ export const FriendListWrapper = styled.ul`
     width: 40%;
 `;
 
-const FriendList = ({ friends }) => (
-  <FriendListWrapper>
-    {friends.map(friend => (
-      <FriendListItem
-        key={friend.id}
-        avatar={friend.avatar}
-        isOnline={friend.isOnline}
-        name={friend.name}
-      />
-    ))}
-  </FriendListWrapper>
-);
+export const FriendList = ({ friends }) => {
+  return (
+    <FriendListWrapper>
+      {friends.map(friend => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          isOnline={friend.isOnline}
+          name={friend.name}
+        />
+      ))}
+    </FriendListWrapper>
+  );
+};
 
-export default FriendList;

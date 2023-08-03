@@ -6,18 +6,20 @@ function getRandomHexColor() {
   return bgColor;
 }
 
-const Statistics = ({ title, stats }) => (
-  <StatisticsContainer>
-    {title && <Title>{title}</Title>}
-    <StatList>
-      {stats.map((stat) => (
-        <StatListItem key={stat.id} bgColor={getRandomHexColor()}>
-          <Label>{stat.label}</Label>
-          <Percentage>{stat.percentage}%</Percentage>
-        </StatListItem>
-      ))}
-    </StatList>
-  </StatisticsContainer>
-);
+export const Statistics = ({ title, stats }) => {
+  return (
+    <StatisticsContainer>
+      {title && <Title>{title}</Title>}
+      
+      <StatList>
+        {stats.map((stat) => (
+          <StatListItem key={stat.id} bgColor={getRandomHexColor()}>
+            <Label>{stat.label}</Label>
+            <Percentage>{stat.percentage}%</Percentage>
+          </StatListItem>
+        ))}
+      </StatList>
+    </StatisticsContainer>
+  );
+};
 
-export default Statistics;
