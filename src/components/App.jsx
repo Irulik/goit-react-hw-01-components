@@ -1,4 +1,8 @@
-export const App = () => {
+import React from 'react';
+// import Profile from './profile/Profile.styled.js'
+
+
+export const App = ({ children }) => {
   return (
     <div
       style={{
@@ -10,7 +14,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      {children}
     </div>
   );
 };
